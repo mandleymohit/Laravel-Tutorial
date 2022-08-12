@@ -1,0 +1,13 @@
+{
+    "name": "Practitioners",
+    "alias": "practitioners",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Practitioners\\Providers\\PractitionersServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

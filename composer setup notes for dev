@@ -1,0 +1,52 @@
+#NEW SETUP
+
+composer create-project --prefer-dist laravel/laravel tutorial-app
+
+#ADD AUTH  (also + vite + vue + ts)
+
+composer require laravel/ui:^2.4 
+php artisan ui vue --auth
+
+composer require laravel/ui
+php artisan ui bootstrap
+npm install && npm run dev
+php artisan ui bootstrap --auth
+npm install && npm run dev
+
+#ADD ROLE 
+
+composer require spatie/laravel-permission
+composer require laravelcollective/html
+
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+php artisan migrate
+
+#Debuger
+
+composer require barryvdh/laravel-debugbar --dev
+
+#HMVC Cheatsheet Revision:
+https://nwidart.com/laravel-modules/v6/installation-and-setup
+
+composer require nwidart/laravel-modules
+
+php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
+
+{
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Modules\\": "Modules/"    <--------- add in composer.json
+    }
+  }
+}
+
+composer dump-autoload
+
+php artisan module:make Admin
+
+php artisan module:make Admin Practitioners Clients  
+
+rm -rf Modules/blog         <----- used for removing
+
